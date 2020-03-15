@@ -1,45 +1,57 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-    <footer class="footer">
-      <p style="record">
-        <span>京ICP备20004956号-1</span>
-      </p>
-    </footer>
-  </div>
+  <el-container class="">
+    <el-header
+      ><div id="nav">
+        <router-link to="/">网站首页</router-link>|
+        <router-link to="/blog">个人博客</router-link>|
+        <router-link to="/resume">简历</router-link>|
+        <router-link to="/about">联系方式</router-link>
+      </div></el-header
+    >
+    <el-main><router-view /></el-main>
+    <el-footer><Footer /></el-footer>
+  </el-container>
 </template>
 
+<script>
+import Footer from "@/layout/Footer.vue";
+
+export default {
+  name: "App",
+  components: {
+    Footer
+  }
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+#nav {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+#nav a {
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+.el-header {
+  line-height: 60px;
+}
+.el-header,
+.el-footer {
+  text-align: center;
+  // line-height: 60px;
 }
 
-.footer {
-  background-color: #fafafa;
-  .record {
-    text-align: center;
-    color: #bbb;
-  }
+.el-main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 </style>

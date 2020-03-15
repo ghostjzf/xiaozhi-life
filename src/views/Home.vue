@@ -1,17 +1,19 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Hello Docker" />
+    <h2>Welcome To My World!</h2>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "home",
-  components: {
-    HelloWorld
-  }
+  name: "home"
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  text-align: center;
+}
+</style>
