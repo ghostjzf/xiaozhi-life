@@ -11,7 +11,10 @@ import {
   Footer,
   Row,
   Col,
-  Card
+  Card,
+  Button,
+  Collapse,
+  CollapseItem
 } from "element-ui";
 
 Vue.use(Container);
@@ -22,6 +25,9 @@ Vue.use(Footer);
 Vue.use(Row);
 Vue.use(Col);
 Vue.use(Card);
+Vue.use(Button);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
 
 Vue.config.productionTip = false;
 

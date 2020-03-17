@@ -1,15 +1,19 @@
 <template>
-  <el-container class="">
-    <el-header
-      ><div id="nav">
+  <el-container class>
+    <el-header>
+      <div id="nav">
         <router-link to="/">网站首页</router-link>|
         <router-link to="/blog">个人博客</router-link>|
         <router-link to="/resume">简历</router-link>|
         <router-link to="/about">联系方式</router-link>
-      </div></el-header
-    >
-    <el-main><router-view /></el-main>
-    <el-footer><Footer /></el-footer>
+      </div>
+    </el-header>
+    <el-main>
+      <router-view />
+    </el-main>
+    <el-footer>
+      <Footer />
+    </el-footer>
   </el-container>
 </template>
 
@@ -25,6 +29,19 @@ export default {
 </script>
 
 <style lang="scss">
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+}
+.el-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  border-bottom: 3px double #ececec;
+  background-color: #fff;
+  z-index: 10;
+}
 #nav {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,18 +1,10 @@
 <template>
-  <div>
-    <el-row>
-      <el-col :span="8" v-for="(item, index) in list" :key="index">
-        <el-card :body-style="{ padding: '0px' }">
-          <div style="padding: 14px;">
-            <span>{{ item.label }}</span>
-            <div class="bottom clearfix">
-              <el-button type="text" class="button">操作按钮</el-button>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-  </div>
+  <ul class="list-wrap">
+    <li class="list-item" v-for="(item, index) in list" :key="index">
+      <span>{{ item.label }}</span>
+      <el-button type="text" class="button">查看</el-button>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -82,4 +74,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.list-wrap {
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 5px;
+  padding: 5px 0;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
 </style>
