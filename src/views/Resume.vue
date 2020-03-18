@@ -46,17 +46,33 @@
             <div></div>
           </el-collapse-item>
           <el-collapse-item title="北京无限印象网络科技有限公司(微代驾)" name="3">
-            <div>2016.5 - 2017.5；</div>
+            <div>2016.5 - 2017.5</div>
             <div></div>
           </el-collapse-item>
         </el-collapse>
       </ResumeItem>
       <ResumeItem title="项目介绍">
         <div>
-          <div>Bos2.0</div>
-          <div>虎友会, 快点Plus, 快点Boos</div>
-          <div>易行泊车</div>
-          <div>奔跑的coder(个人网站)</div>
+          <div>
+            <h5>项目名称：Bos2.0</h5>
+            <div>项目介绍：</div>
+            <div>工作职责：</div>
+          </div>
+          <div>
+            <h5>项目名称：虎友会, 快点Plus, 快点Boos</h5>
+            <div>项目介绍：</div>
+            <div>工作职责：</div>
+          </div>
+          <div>
+            <h5>项目名称：易行泊车</h5>
+            <div>项目介绍：</div>
+            <div>工作职责：</div>
+          </div>
+          <div>
+            <h5>项目名称：奔跑的coder(个人网站)</h5>
+            <div>项目介绍：</div>
+            <div>工作职责：</div>
+          </div>
         </div>
       </ResumeItem>
       <ResumeItem title="学历教育">
