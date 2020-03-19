@@ -26,3 +26,10 @@ test_db:
   script:
     - npm install
     - node ./specs/start.js ./specs/db-postgres.spec.js
+
+publish
+  script:
+    - npm install
+    - git pull
+    - npm run build
+    - docker-compose restart
