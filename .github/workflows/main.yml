@@ -36,6 +36,6 @@ jobs:
         REMOTE_USER: 'root'
         REMOTE_HOST: '${{ secrets.SERVER_IP }}' #正式服务器地址
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        ARGS: "-rltgoDzvO"
+        ARGS: "-avzr --delete"
         SOURCE: "dist/"
         TARGET: '/data/codes/xiaozhi-life/dist' #服务器部署路径
