@@ -24,7 +24,7 @@ jobs:
     - name: Use Node.js 12
       uses: actions/setup-node@v1
       with: 
-        node-version: 12
+        node-version: '12.x'
     # Runs a set of commands using the runners shell
     - name: npm install and build
       run: |
@@ -37,5 +37,5 @@ jobs:
         REMOTE_HOST: '${{ secrets.SERVER_IP }}' #正式服务器地址
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-avzr --delete"
-        SOURCE: "dist/"
+        SOURCE: "/dist/"
         TARGET: '/data/codes/xiaozhi-life/dist' #服务器部署路径
