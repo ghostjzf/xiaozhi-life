@@ -33,8 +33,9 @@ jobs:
     - name: deploy file to prod server
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
-        REMOTE_USER: 'username'
+        REMOTE_USER: 'root'
         REMOTE_HOST: '${{ secrets.SERVER_IP }}' #正式服务器地址
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: './dist/*'
-        TATGET: '/data/codes/xiaozhi-life/dist' #服务器部署路径
+        ARGS: "-rltgoDzvO"
+        SOURCE: "dist/"
+        TARGET: '/data/codes/xiaozhi-life/dist' #服务器部署路径
